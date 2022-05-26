@@ -1,5 +1,5 @@
 # Mandatory - file path w.r.t project root.  This helps us with serving your model
-reqirements_file_path:
+reqirements_file_path: requirements.txt
 # Mandatory - file path w.r.t project root.  This helps us with serving your model
 model_file_path: flair/models/text_classification_model.py
 # Mandatory - HTTP GET url to download pre-trained file.  Model must be directly downloadable from this url. 

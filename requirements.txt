@@ -25,4 +25,4 @@ conllu>=4.0
 more-itertools
 wikipedia-api
 pptree
-tiyaro
+tiyaro>=0.0.dev2
