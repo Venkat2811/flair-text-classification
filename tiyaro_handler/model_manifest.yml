@@ -1,0 +1,23 @@
+# Mandatory - file path w.r.t project root.  This helps us with serving your model
+reqirements_file_path:
+# Mandatory - file path w.r.t project root.  This helps us with serving your model
+model_file_path: flair/models/text_classification_model.py
+# Mandatory - HTTP GET url to download pre-trained file.  Model must be directly downloadable from this url. 
+# OR local file path.  (In case of relative path, must be with respect to project root)
+pretrained_model_url: https://nlp.informatik.hu-berlin.de/resources/models/sentiment-curated-distilbert/sentiment-en-mix-distillbert_4.pt
+# Optional - Description of your model in few lines
+description: Flair is A powerful NLP library. Flair allows you to apply our state-of-the-art natural language processing (NLP) models to your text, such as named entity recognition (NER), part-of-speech tagging (PoS), special support for biomedical data, sense disambiguation and classification, with support for a rapidly growing number of languages.
+# Optional - Tags List - ex: Image Recognition, Object Detection, NLP, etc.,
+tags:
+  - Text Classification
+# Optional - Papers / Website / Article links to your model
+papers:
+  # https://arxiv.org
+  arxiv:
+  # Optional - https://paperswithcode.com/
+  papers_with_code:
+  # custom key
+  your_custom_key:
+
+
+

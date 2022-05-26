@@ -1,0 +1,6 @@
+{
+    "model_name": "FLAIR_TEXT_CLASSIFICATION",
+    "model_framework": "pytorch",
+    "model_type": "text-classification",
+    "model_name_suffix": "0e19a4"
+}
