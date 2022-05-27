@@ -1,16 +1,31 @@
+import argparse
 import json
 import sys
 import traceback
 
-from tiyaro.sdk.test_utils.util import get_input_by_class, get_pretrained_file_path, validate_and_save_test_input, validate_and_save_test_output
+from tiyaro.sdk.test_utils.util import (TEST_COMMAND_ARG_INPUT,
+                                        TEST_COMMAND_ARG_OUTPUT,
+                                        TEST_COMMAND_ARG_PRETRAINED,
+                                        get_input_by_class,
+                                        get_pretrained_file_path,
+                                        validate_and_save_test_input,
+                                        validate_and_save_test_output)
 
 from tiyaro_handler.model_handler import TiyaroHandler
 
 if __name__ == "__main__":
     try:
-        file_path = get_pretrained_file_path(sys.argv[1])
-        test_input = get_input_by_class(sys.argv[2])
-        output_file = sys.argv[3]
+        my_parser = argparse.ArgumentParser()
+        my_parser.add_argument(
+            TEST_COMMAND_ARG_PRETRAINED, type=str, required=False)
+        my_parser.add_argument(TEST_COMMAND_ARG_INPUT, type=str, required=True)
+        my_parser.add_argument(TEST_COMMAND_ARG_OUTPUT,
+                               type=str, required=False)
+        args = my_parser.parse_args()
+
+        file_path = get_pretrained_file_path(args.pretrained)
+        test_input = get_input_by_class(args.input)
+        output_file = args.output
         if output_file == "None":
             output_file = None
 
